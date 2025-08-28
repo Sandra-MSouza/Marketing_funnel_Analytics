@@ -1,0 +1,110 @@
+import pandas as pd
+import json
+import numpy as np
+
+# Load CSV 
+df = pd.read_csv('marketing_funnel.csv', sep=';')
+
+# Normalize column names
+cols = {
+    'data': 'data',
+    'canal': 'canal',
+    'campanha': 'campanha',
+    'impressoes': 'impressoes',
+    'cliques': 'cliques',
+    'custo': 'custo',
+    'leads': 'leads',
+    'mql': 'mql',
+    'sql': 'sql',
+    'clientes': 'clientes',
+    'receita': 'receita'
+}
+# Ensure only existing columns are mapped
+cols = {k:v for k,v in cols.items() if k in df.columns}
+df = df.rename(columns=cols)
+
+# Parse date
+try:
+    df['data'] = pd.to_datetime(df['data'])
+except Exception:
+    pass
+
+# Fill NaNs with zeros for numeric metrics
+num_cols = ['impressoes','cliques','custo','leads','mql','sql','clientes','receita']
+for c in num_cols:
+    if c in df.columns:
+        df[c] = pd.to_numeric(df[c], errors='coerce').fillna(0)
+
+# Overall KPIs
+kpis = {c: int(df[c].sum()) if c not in ['custo','receita'] else float(df[c].sum()) for c in num_cols}
+
+# Derived metrics with safe division
+safe_div = lambda a,b: float(a)/float(b) if float(b) != 0 else None
+
+kpis_derived = {
+    'CTR': safe_div(df['cliques'].sum(), df['impressoes'].sum()),
+    'CPC': safe_div(df['custo'].sum(), df['cliques'].sum()),
+    'CPL': safe_div(df['custo'].sum(), df['leads'].sum()),
+    'CPM': safe_div(df['custo'].sum()*1000, df['impressoes'].sum()),
+    'CAC': safe_div(df['custo'].sum(), df['clientes'].sum()),
+    'ROI': safe_div(df['receita'].sum() - df['custo'].sum(), df['custo'].sum()),
+    'Conv Clique->Lead': safe_div(df['leads'].sum(), df['cliques'].sum()),
+    'Conv Lead->MQL': safe_div(df['mql'].sum(), df['leads'].sum()),
+    'Conv MQL->SQL': safe_div(df['sql'].sum(), df['mql'].sum()),
+    'Conv SQL->Cliente': safe_div(df['clientes'].sum(), df['sql'].sum()),
+}
+
+# Time series monthly
+by_month = (df.groupby(df['data'].dt.to_period('M'))
+              .agg({c:'sum' for c in num_cols})
+              .reset_index())
+by_month['data'] = by_month['data'].astype(str)
+
+# By canal
+by_canal = (df.groupby('canal')
+              .agg({c:'sum' for c in num_cols})
+              .reset_index())
+
+# Add rates to by_canal
+for name, func in [
+    ('CTR', lambda r: safe_div(r['cliques'], r['impressoes'])),
+    ('CPC', lambda r: safe_div(r['custo'], r['cliques'])),
+    ('CPL', lambda r: safe_div(r['custo'], r['leads'])),
+    ('CPM', lambda r: safe_div(r['custo']*1000, r['impressoes'])),
+    ('CAC', lambda r: safe_div(r['custo'], r['clientes'])),
+    ('ROI', lambda r: safe_div(r['receita'] - r['custo'], r['custo'])),
+    ('Conv Clique->Lead', lambda r: safe_div(r['leads'], r['cliques'])),
+    ('Conv Lead->MQL', lambda r: safe_div(r['mql'], r['leads'])),
+    ('Conv MQL->SQL', lambda r: safe_div(r['sql'], r['mql'])),
+    ('Conv SQL->Cliente', lambda r: safe_div(r['clientes'], r['sql'])),
+]:
+    by_canal[name] = by_canal.apply(func, axis=1)
+
+# By campanha
+by_campanha = (df.groupby('campanha')
+                 .agg({c:'sum' for c in num_cols})
+                 .reset_index())
+for name, func in [
+    ('CTR', lambda r: safe_div(r['cliques'], r['impressoes'])),
+    ('CPC', lambda r: safe_div(r['custo'], r['cliques'])),
+    ('CPL', lambda r: safe_div(r['custo'], r['leads'])),
+    ('CPM', lambda r: safe_div(r['custo']*1000, r['impressoes'])),
+    ('CAC', lambda r: safe_div(r['custo'], r['clientes'])),
+    ('ROI', lambda r: safe_div(r['receita'] - r['custo'], r['custo'])),
+    ('Conv Clique->Lead', lambda r: safe_div(r['leads'], r['cliques'])),
+    ('Conv Lead->MQL', lambda r: safe_div(r['mql'], r['leads'])),
+    ('Conv MQL->SQL', lambda r: safe_div(r['sql'], r['mql'])),
+    ('Conv SQL->Cliente', lambda r: safe_div(r['clientes'], r['sql'])),
+]:
+    by_campanha[name] = by_campanha.apply(func, axis=1)
+
+# Prepare JSON-friendly output
+result = {
+    'kpis': kpis,
+    'kpis_derived': kpis_derived,
+    'by_month': by_month.to_dict(orient='records'),
+    'by_canal': by_canal.to_dict(orient='records'),
+    'by_campanha': by_campanha.to_dict(orient='records'),
+}
+
+print(json.dumps(result, ensure_ascii=False, indent=2))
