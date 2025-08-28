@@ -1,51 +1,84 @@
+# 📊 Marketing Funnel Analytics
 
-| 📊 Marketing Funnel Analytics Dashboard |
-Este projeto analisa e visualiza dados de um funil de marketing digital multicanal, explorando desde impressões até clientes conquistados.
-O objetivo é demonstrar habilidades de Data Analytics aplicado a Marketing, com foco em métricas de performance, dashboard interativo e storytelling de dados.
-___________________________________________________________________________________________________________________________________________________________________
 
-| 🚀 Objetivos do Projeto |
-Tratar dados de campanhas de marketing (pagas, email, redes sociais e orgânico).
-Calcular KPIs essenciais: CTR, CPC, CPL, CPM, CAC, ROI e taxas de conversão.
-Construir dashboards interativos para acompanhamento de desempenho.
-Gerar insights estratégicos para decisões de marketing.
-_____________________________________________________________________________________________________________________________________________________________________
 
-| 🗂️ Estrutura do Projeto
-| 📁 marketing-funnel-analytics
-- ├── 📄 marketing_funnel.csv       # Dados brutos (criado com ajuda de IA)|
-- ├── 📁 src                        # Scripts Python de ETL e métricas     |
-- ├── 📁 dashboard                  # Dashboard interativo (Power BI)      |
-- └── 📄 README.md                  # Documentação do projeto              |
-_______________________________________________________________________________________________________________________________________________________________________
+Análise de Performance de Funil de Marketing — **Dados Consolidados**  
+Projeto desenvolvido para mensurar resultados de campanhas digitais, otimizar investimentos e identificar os melhores canais de aquisição de clientes.  
 
-| 📈 Principais Métricas Calculadas |
-- CTR (Click Through Rate)
-- CPC (Custo por Clique)
-- CPL (Custo por Lead)
-- CPM (Custo por mil impressões)
-- CAC (Custo de Aquisição de Cliente)
-- ROI (Retorno sobre Investimento)
-- Taxas de conversão: Clique → Lead → MQL → SQL → Cliente
-_______________________________________________________________________________________________________________________________________________________________________
+---
 
-| 📊 Dashboard |
-👉 Link do Dashboard Interativo (Em Breve)
+## 🎯 Objetivos do Projeto
+- Medir o desempenho do funil de marketing digital.  
+- Avaliar métricas de eficiência (CPC, CAC, ROI).  
+- Identificar canais mais rentáveis e gargalos no funil.  
+- Auxiliar na tomada de decisão estratégica.  
 
-O dashboard permite:
+---
 
-- Visualizar evolução mês a mês das métricas.
-- Comparar canais (Pesquisa Paga, Orgânico, Email, Social).
-- Acompanhar taxas de conversão no funil completo.
-- Identificar canais e campanhas com maior ROI vs maior custo.
-Exemplo de KPIs :
-________________________________________________________________________________________________________________________________________________________________________
-//    Indicador     //     	Valor        //  
-   - Impressões    |	 1.142.000 
-   - Clicks 	     |    57.450    
-   - Leads	       |    5.950     
-   - Clientes      |    715      
-   - Receita total |  R$ 138.650 
-   - ROI	         |   +293%     
-________________________________________________________________________________________________________________________________________________________________________
+## 📝 Sobre os Dados
+Os dados apresentados neste projeto são **fictícios**, criados por mim para fins didáticos e de demonstração de portfólio.  
+Foram elaborados de forma a simular campanhas reais de marketing digital, com diferentes canais de aquisição (Google, Facebook, LinkedIn e SEO) e métricas de performance (impressões, cliques, leads, clientes, custo, receita).  
+
+👉 Essa construção de dataset reforça minha habilidade de:  
+- **Criar cenários de negócio realistas**.  
+- **Definir métricas relevantes para análise**.  
+- **Estruturar dados de forma independente** para prática e desenvolvimento de projetos.  
+
+---
+
+## 📌 Principais KPIs Monitorados
+- **Impressões**  
+- **Cliques & CTR**  
+- **Custo Total & CPC**  
+- **Leads & Taxa de Conversão**  
+- **CAC (Custo de Aquisição por Cliente)**  
+- **Receita & ROI**
+
+---
+
+## 📷 Dashboard em Power BI
+
+### Visão Geral
+![Dashboard Visão Geral]
+
+### Receita por Canal
+![Receita por Canal]
+
+### Evolução Mensal
+![Evolução Mensal]
+
+### Distribuição de Campanhas
+![Distribuição de Campanhas]
+
+---
+
+## 🔎 Principais Insights
+- O canal **Google Ads** gerou a maior receita, seguido por Facebook.  
+- O ROI geral foi de **465%**, indicando ótima eficiência do investimento.  
+- O **CAC médio** foi de **R$ 708,34**, mostrando espaço para otimização.  
+- A conversão de leads em clientes está em **3,8%**, sinalizando oportunidade de melhoria no funil.  
+
+---
+
+## 🚀 Tecnologias Utilizadas
+- **Power BI** para modelagem e visualização de dados  
+- **Excel/CSV** como fonte de dados brutos  
+- **DAX** para criação de medidas e cálculos  
+
+---
+
+## 📂 Estrutura do Repositório
+
+
+---
+
+## 📌 Acesse o Dashboard
+👉 [Link do Dashboard Interativo (em breve)
+
+---
+
+## 👩‍💻 Autora
+**Sandra Souza**  
+[LinkedIn](https://linkedin.com/in/sandramssouza) | [GitHub](https://github.com/Sandra-MSouza)
+
 
