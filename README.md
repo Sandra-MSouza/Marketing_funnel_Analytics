@@ -1,6 +1,6 @@
 # 📊 Marketing Funnel Analytics
 
-![Capa Futurista](./images/capa.png)
+https://github.com/Sandra-MSouza/Marketing_funnel_Analytics/blob/main/dash%20futuristico.png
 
 
 Análise de Performance de Funil de Marketing — **Dados Consolidados**  
