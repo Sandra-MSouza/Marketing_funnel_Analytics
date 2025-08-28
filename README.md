@@ -1,5 +1,6 @@
 # 📊 Marketing Funnel Analytics
 
+![Capa Futurista](./images/capa.png)
 
 
 Análise de Performance de Funil de Marketing — **Dados Consolidados**  
