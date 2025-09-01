@@ -75,7 +75,7 @@ Foram elaborados de forma a simular campanhas reais de marketing digital, com di
 ---
 
 ## 📌 Acesse o Dashboard
-👉 [Link do Dashboard Interativo (em breve)
+👉 [https://growth-metric-view.lovable.app]
 
 ---
 
