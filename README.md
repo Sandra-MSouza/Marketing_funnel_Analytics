@@ -38,9 +38,9 @@ Foram elaborados de forma a simular campanhas reais de marketing digital, com di
 
 ## 📷 Dashboard em Power BI
 
-  ![Dashboard](foto8.PNG)
-  ![Dashboard](foto5.PNG)
-  ![Dashboard](foto12.PNG)
+  ![Dashboard](imagem/foto8.PNG)
+  ![Dashboard](imagem/foto5.PNG)
+  ![Dashboard](imagem/foto12.PNG)
 
 
 ---
