@@ -38,16 +38,10 @@ Foram elaborados de forma a simular campanhas reais de marketing digital, com di
 
 ## 📷 Dashboard em Power BI
 
+  ![Dashboard](foto8.PNG)
+  ![Dashboard](foto5.PNG)
+  ![Dashboard](foto12.PNG)
 
-
-### Receita por Canal
-![Receita por Canal]
-
-### Evolução Mensal
-![Evolução Mensal]
-
-### Distribuição de Campanhas
-![Distribuição de Campanhas]
 
 ---
 
