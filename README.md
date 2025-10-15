@@ -2,76 +2,74 @@
 
 ![Capa Futurista](https://raw.githubusercontent.com/Sandra-MSouza/Marketing_funnel_Analytics/refs/heads/main/dash%20futuristico.png)
 
-Análise de Performance de Funil de Marketing — **Dados Consolidados**  
-Projeto desenvolvido para mensurar resultados de campanhas digitais, otimizar investimentos e identificar os melhores canais de aquisição de clientes.  
+Marketing Funnel Performance Analysis — Consolidated Data
+A project designed to measure digital campaign results, optimize investments, and identify the best customer acquisition channels.
 
----
+🎯 Project Objectives
+Measure the performance of the digital marketing funnel.
 
-## 🎯 Objetivos do Projeto
-- Medir o desempenho do funil de marketing digital.  
-- Avaliar métricas de eficiência (CPC, CAC, ROI).  
-- Identificar canais mais rentáveis e gargalos no funil.  
-- Auxiliar na tomada de decisão estratégica.  
+Evaluate efficiency metrics (CPC, CAC, ROI).
 
----
+Identify the most profitable channels and bottlenecks in the funnel.
 
-## 📝 Sobre os Dados
-Os dados apresentados neste projeto são **fictícios**, criados por mim para fins didáticos e de demonstração de portfólio.  
-Foram elaborados de forma a simular campanhas reais de marketing digital, com diferentes canais de aquisição (Google, Facebook, LinkedIn e SEO) e métricas de performance (impressões, cliques, leads, clientes, custo, receita).  
+Support strategic decision-making.
 
-👉 Essa construção de dataset reforça minha habilidade de:  
-- **Criar cenários de negócio realistas**.  
-- **Definir métricas relevantes para análise**.  
-- **Estruturar dados de forma independente** para prática e desenvolvimento de projetos.  
+📝 About the Data
+The data presented in this project is fictitious, created by me for educational and portfolio demonstration purposes.
+It was designed to simulate real digital marketing campaigns, featuring different acquisition channels (Google, Facebook, LinkedIn, and SEO) and performance metrics (impressions, clicks, leads, customers, cost, revenue).
 
----
+👉 This dataset construction highlights my ability to:
 
-## 📌 Principais KPIs Monitorados
-- **Impressões**  
-- **Cliques & CTR**  
-- **Custo Total & CPC**  
-- **Leads & Taxa de Conversão**  
-- **CAC (Custo de Aquisição por Cliente)**  
-- **Receita & ROI**
+Create realistic business scenarios.
 
----
+Define relevant metrics for analysis.
 
-## 📷 Dashboard em Power BI
+Independently structure data for practice and project development.
 
-  ![Dashboard](imagem/foto8.PNG)
-  ![Dashboard](imagem/foto5.PNG)
-  ![Dashboard](imagem/foto12.PNG)
+📌 Key KPIs Monitored
+Impressions
 
+Clicks & CTR
 
----
+Total Cost & CPC
 
-## 🔎 Principais Insights
-- O canal **Google Ads** gerou a maior receita, seguido por Facebook.  
-- O ROI geral foi de **465%**, indicando ótima eficiência do investimento.  
-- O **CAC médio** foi de **R$ 708,34**, mostrando espaço para otimização.  
-- A conversão de leads em clientes está em **3,8%**, sinalizando oportunidade de melhoria no funil.  
+Leads & Conversion Rate
 
----
+CAC (Customer Acquisition Cost)
 
-## 🚀 Tecnologias Utilizadas
-- **Power BI** para modelagem e visualização de dados  
-- **Excel/CSV** como fonte de dados brutos  
-- **DAX** para criação de medidas e cálculos  
+Revenue & ROI
 
----
+📷 Power BI Dashboard
 
-## 📂 Estrutura do Repositório
+Images
 
+🔎 Key Insights
+The Google Ads channel generated the highest revenue, followed by Facebook.
 
----
+The overall ROI was 465%, indicating excellent investment efficiency.
 
-## 📌 Acesse o Dashboard
+The average CAC was R$708.34, showing room for optimization.
+
+The lead-to-customer conversion rate is 3.8%, signaling an opportunity for funnel improvement.
+
+🚀 Technologies Used
+Power BI for data modeling and visualization
+
+Excel/CSV as the raw data source
+
+DAX for creating measures and calculations
+
+📂 Repository Structure
+📌 Access the Dashboard
 👉 [https://growth-metric-view.lovable.app]
 
----
+👩‍💻 Author
+Sandra Souza
+LinkedIn | GitHub
 
-## 👩‍💻 Autora
-**Sandra Souza**  
-[LinkedIn](https://linkedin.com/in/sandramssouza) | [GitHub](https://github.com/Sandra-MSouza)
+
+
+
+
 
 
