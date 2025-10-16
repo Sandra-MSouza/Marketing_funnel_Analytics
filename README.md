@@ -52,14 +52,13 @@ The lead-to-customer conversion rate is 3.8%, signaling an opportunity for funne
 
 🚀 Technologies Used
 Power BI for data modeling and visualization
-
 Excel/CSV as the raw data source
-
+Python(Pandas)
 DAX for creating measures and calculations
 
 📂 Repository Structure
 📌 Access the Dashboard
-👉 [https://growth-metric-view.lovable.app]
+👉
 
 👩‍💻 Author
 Sandra Souza
