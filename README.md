@@ -1,7 +1,5 @@
 # 📊 Marketing Funnel Analytics
 
-![Capa Futurista](https://raw.githubusercontent.com/Sandra-MSouza/Marketing_funnel_Analytics/refs/heads/main/dash%20futuristico.png)
-
 Marketing Funnel Performance Analysis — Consolidated Data
 A project designed to measure digital campaign results, optimize investments, and identify the best customer acquisition channels.
 
