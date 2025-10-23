@@ -1,6 +1,6 @@
 # Marketing Funnel Performance Dashboard
 
-![Marketing Dashboard Preview](marketing_dashboard.png)
+![Marketing Dashboard Preview](Mktenglish.PNG)
 
 ## 📖 Overview
 
