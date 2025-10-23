@@ -1,72 +1,47 @@
-# 📊 Marketing Funnel Analytics
+# Marketing Funnel Performance Dashboard
 
-Marketing Funnel Performance Analysis — Consolidated Data
-A project designed to measure digital campaign results, optimize investments, and identify the best customer acquisition channels.
+![Marketing Dashboard Preview](marketing_dashboard.png)
 
-🎯 Project Objectives
-Measure the performance of the digital marketing funnel.
+## 📖 Overview
 
-Evaluate efficiency metrics (CPC, CAC, ROI).
+This project involves the end-to-end development of a marketing performance dashboard. The primary goal was to analyze a raw marketing CSV file, process it using Python for data cleaning and feature engineering, and then build an interactive dashboard in Power BI to visualize key metrics (KPIs) and drive business insights.
 
-Identify the most profitable channels and bottlenecks in the funnel.
+## 🛠️ Tools Used
 
-Support strategic decision-making.
+* **Python (Pandas):** For data cleaning, transformation, and feature engineering.
+* **Power BI:** For data modeling (Star Schema with a Date Dimension) and visualization.
+* **DAX:** For creating advanced measures like `Total CPL` and `Total CTR`.
 
-📝 About the Data
-The data presented in this project is fictitious, created by me for educational and portfolio demonstration purposes.
-It was designed to simulate real digital marketing campaigns, featuring different acquisition channels (Google, Facebook, LinkedIn, and SEO) and performance metrics (impressions, clicks, leads, customers, cost, revenue).
+## 💻 The Process
 
-👉 This dataset construction highlights my ability to:
+### 1. Data Cleaning & Transformation (Python)
 
-Create realistic business scenarios.
+The original `marketing_funnel.csv` file presented significant challenges:
+* The data was not properly delimited and was read as a single column.
+* Numeric values used dots (`.`) as decimal separators, which caused import errors in Power BI due to regional settings (expecting commas `,`).
+* Core KPIs like CTR, CPC, and CPL were missing.
 
-Define relevant metrics for analysis.
+To solve this, a Python script (`/scripts/process_data.py`) was developed using the Pandas library to:
+1.  **Load and Split:** Correctly parse the CSV data by splitting the rows and headers.
+2.  **Type Conversion:** Ensure all numeric columns were correctly converted to numeric types.
+3.  **Feature Engineering:** Create new columns for key metrics:
+    * `cpc` (Cost Per Click)
+    * `ctr` (Click-Through Rate)
+    * `cpl` (Cost Per Lead)
+    * `conversion_rate`
+4.  **Export:** Save the cleaned and enriched data to a new file, `marketing_funnel_analyzed.csv`, ready for Power BI.
 
-Independently structure data for practice and project development.
+### 2. Data Modeling & Visualization (Power BI)
 
-📌 Key KPIs Monitored
-Impressions
+In Power BI:
+* A **Star Schema** model was implemented by connecting the main `marketing_funnel_analyzed` (Fact Table) to a custom-built `dCalendario` (Dimension Table).
+* Professional **DAX measures** were written to calculate business-critical KPIs like `Total CPL` and `Total CTR`, ensuring calculations were accurate (e.g., `SUM(Cost) / SUM(Leads)`) rather than just averaging row-level data.
+* The final dashboard provides a clear overview of total costs, revenue, and key performance indicators, with breakdowns by channel and trends over time.
 
-Clicks & CTR
+## 📊 Key Insights
 
-Total Cost & CPC
-
-Leads & Conversion Rate
-
-CAC (Customer Acquisition Cost)
-
-Revenue & ROI
-
-📷 Power BI Dashboard
-
-Images
-
-🔎 Key Insights
-The Google Ads channel generated the highest revenue, followed by Facebook.
-
-The overall ROI was 465%, indicating excellent investment efficiency.
-
-The average CAC was R$708.34, showing room for optimization.
-
-The lead-to-customer conversion rate is 3.8%, signaling an opportunity for funnel improvement.
-
-🚀 Technologies Used
-Power BI for data modeling and visualization
-Excel/CSV as the raw data source
-Python(Pandas)
-DAX for creating measures and calculations
-
-📂 Repository Structure
-📌 Access the Dashboard
-👉
-
-👩‍💻 Author
-Sandra Souza
-LinkedIn | GitHub
-
-
-
-
-
+* **Total Revenue** ($139k) significantly outweighs **Total Cost** ($28.8k), showing a positive ROI.
+* The **"Paid Search"** channel is the largest driver of both revenue and cost, as seen in the "Total Revenue by Channel" and "Total Cost by Channel" visuals.
+* The **Conversion Funnel** visual clearly identifies the drop-off rates between each stage, from `Impressions` down to `Customers`.
 
 
